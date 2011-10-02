@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+body{
+  font-family: "ＭＳ Ｐゴシック", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main{
+  padding: 8px;
+}
+
+.no-wrap{
+  white-space: nowrap;
+}
+
+
+div.navigation {
+  margin: 1em;
+}
+
+#notice{
+  display: none;
+  font-size: large;
+  padding: 5px;
+  text-align: center;
+  background-color: #ffa;
+  border: 1px solid #dd8;
+  color: black;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.article_title{
+  font-weight: bold;
+}
+.article_body{
+  margin-left: 1em;
+  display: block;
+  margin-bottom: 0.5em;
+  margin-top: 4px;
+  font-size: 11pt;
+}
+
+a{
+  text-decoration: underline;
+  color: #33e;
+  cursor: pointer;
+}
+a:visited{
+  color: #428;
+}
+
+.contents #message{
+  color: red;
+  font-weight: bold;
+}

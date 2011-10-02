@@ -1,0 +1,79 @@
+body{
+  background: #fff url(amako.png) no-repeat fixed right bottom;
+  
+}
+h1{
+  font-size: 20pt;
+}
+
+.option div{
+  float: left;
+  margin-right: 2em;
+}
+
+div#tagcloud {
+  float: right;
+  width: 200px;
+  margin: 2px;
+  padding: 0.8em;
+  border: 1px solid;
+  background-color: white;
+}
+
+a.latest {
+  color: #e33;
+}
+a.earliest {
+  color: #00a;
+}
+a.later {
+  color: grey;
+}
+
+
+.article {
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  padding-bottom: 0.5em;
+}
+
+.article_header {
+  padding-left: 0.5em;
+}
+
+.article_title:before {
+  content: "+ ";
+}
+
+.article_title {
+  font-size: 15pt;
+  font-weight: bold;
+  text-decoration: underline;
+  background-color: #FEE;
+  padding: 2px;
+  border-right: solid 1px #DCC;
+  border-bottom: solid 1px #DCC;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+  display: block;
+}
+
+.article_body {
+  display: block;
+  padding-left: 0.5em;
+  padding-top: 0.5em;
+}
+
+.main {
+  padding: 10px;
+}
+.contents {
+  word-wrap: break-word;
+  padding: 5px;
+}
+
+.footer {
+  text-align: center;
+  padding: 1em;
+}
+
