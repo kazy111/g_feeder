@@ -27,7 +27,7 @@ class PostgreSQLDataManager implements IDataManager {
   
   function get_items($category = NULL, $pagesize = NULL, $page = 0){
     $now = time();
-    $sql = 'select i.id, i.uid, i.description, i.title, i.body, i.permalink, i.date, i.category, f.name, f.author, f.site_url from item_table as i '
+    $sql = 'select i.id, i.uid, i.description, i.title, i.body, i.permalink, i.date, i.category, f.name, f.author, f.site_url, f.feed_url from item_table as i '
       . ' left join feed_table as f on i.feed_id = f.id '
         .' where date <= '.$now;
     if($category)

@@ -55,3 +55,6 @@ a:visited{
   color: red;
   font-weight: bold;
 }
+img {
+  border: none;
+}

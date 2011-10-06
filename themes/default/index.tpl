@@ -11,6 +11,7 @@
 <div>テーマ: {$theme_data}</div>
 </div>
 </div>
+<a href="{$site_url}/rss.php"><img src="{$relative_dir_to_top}/themes/default/feed-icon.png" width="24" height="24" /></a>
 
 <br />
 
