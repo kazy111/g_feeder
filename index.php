@@ -11,7 +11,7 @@ $p = (array_key_exists('p', $_GET) && $_GET['p'] != '' && is_numeric($_GET['p'])
 
 
 $page->set('index', display_list($extra, $c, $p));
-$page->set_title(($c&&$c!='' ? $c.' - ' : '').$GLOBALS['site_title']);
+if($c&&$c!='')$page->set_title($c);
 
 include 'footer.php';
 

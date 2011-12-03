@@ -23,8 +23,9 @@ function display_list($extra, $c = NULL, $p = '0')
 
   foreach($item_data as $arr){
 
+    $arr['description'] = mb_strimwidth($arr['description'], 0, 400, '...', 'UTF8');
     $arr['category_url'] = '?c='.urlencode($arr['category']);
-    $arr['blog_url'] = $arr['site_url'];
+    $arr['org_url'] = $arr['site_url'];
     $arr['date_rfc'] = date(DATE_RFC2822, $arr['date']);
     $arr['date'] = strftime('%Y/%m/%d(%a) %H:%M:%S', $arr['date']);
     $contents_item .= $page->get_once($extra.'article', $arr);
@@ -36,7 +37,7 @@ function display_list($extra, $c = NULL, $p = '0')
 
   $contents_feed = '<ol>';
   foreach($feed_data as $arr){
-
+    $arr['org_url'] = $arr['site_url'];
     $arr['lastdate'] = strftime('%Y/%m/%d(%a) %H:%M:%S', $arr['lastdate']);
     $contents_feed .= $page->get_once($extra.'feed', $arr);
 
@@ -71,11 +72,9 @@ function display_list($extra, $c = NULL, $p = '0')
   }
 
 
-  $title = ($c&&$c!='' ? $c.' - ' : '').$GLOBALS['site_title'];
 
   $data = new Dwoo_Data();
 
-  $data->assign('site_title', $title);
   $data->assign('item_data', $contents_item);
   $data->assign('feed_data', $contents_feed);
   $data->assign('navigate_data', $navigate);

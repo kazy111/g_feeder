@@ -15,6 +15,8 @@ function pull_rss($feed_obj){
   // Use the URL that was passed to the page in SimplePie
   $feed->set_feed_url($url);
 
+  $feed->set_cache_duration(1800);
+
   // XML dump
   $feed->enable_xml_dump(FALSE);
 
